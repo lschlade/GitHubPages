@@ -1,43 +1,337 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
+
 <head>
-	<meta charset="utf-8" />
-	<meta
-			name="viewport"
-			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
-	/>
+    <meta charset="utf-8">
 
-	<title>Demo Portfolio</title>
+    <title>ITP - Projekts</title>
 
-	<link rel="stylesheet" href="dist/reset.css" />
-	<link rel="stylesheet" href="dist/reveal.css" />
-	<link rel="stylesheet" href="dist/theme/black.css" />
+    <meta name="description" content="">
+    <meta name="author" content="Lukas Schlader">
 
-	<!-* Theme used for syntax highlighted code -->
-	<link rel="stylesheet" href="plugin/highlight/monokai.css" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/black.css" id="theme">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css">
 </head>
+
 <body>
+
 <div class="reveal">
-	<div class="slides">
-		<section>Unicorn slide<img src="media/unicorn.png" /></section>
-		<section>Cupcake slide <img scr =media/cupcake.png"></section>
-	</div>
+
+    <!-- Any section element inside of this container is displayed as a slide -->
+    <div class="slides">
+        <section>
+
+            <h2>ITP - Projekte 3 - 4 Jg.</h2>
+            <p>
+                <small>Created by Lukas Schlader</small>
+            </p>
+        </section>
+
+        <section>
+            <h2>Was ist Itp?</h2>
+            <p>
+                Informationtechnische Projekte </p>
+            <p>Projektmanagemt + Programmierung</p>
+        </section>
+        <section>
+            <h2>Projekte:</h2>
+            <ul>
+                <li>Taschenrechner</li>
+                <li>SchereSteinPapier</li>
+                <li>Minesweeper</li>
+                <li>Tetris</li>
+                <li>Quiz</li>
+                <li>Snake</li>
+            </ul>
+        </section>
+        <!-- Example of nested vertical slides -->
+        <section>
+            <section>
+                <h2>Taschenrechner</h2>
+                <p>Erstes Projekt </p>
+                <br>
+                <img src="/Media/tr.png">
+            </section>
+            <section>
+                <h2>Projektdetails</h2>
+                <p>Aufgabe:<br>Erstellen eines Taschenrechners mit den Grundrechnungsarten, Kommarechnung und weiteren
+                    einfachen Features<br>Einlesen über Buttons und Tastatur</p>
+                <p>Framework: JavaFX</p>
+                <p>Management: Keines</p>
+                <p>Versionverwaltung: Keine</p>
+                <p>Teamgröße: 1</p>
+
+            </section>
+            <section data-auto-animate>
+                <h2 data-id="code-title">Unterscheidung von <br> 7 & / und + & *, beim betätigen der shift taste</h2>
+                <pre data-id="code-animation"><code class="hljs javascript" data-trim data-line-numbers>
+					@FXML
+    public void KeyPressed(KeyEvent Event) {
+        System.out.println(Event.getText());
+        if (Event.isShiftDown()) {
+            if (Event.getText().equals("+")) calc("*");
+            else if (Event.getText().equals("7")) calc("/");
+        }
+        ...
+    }
+
+					</code></pre>
+                <p></p>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h2>Schere Stein Papier</h2>
+                <p>Erstes Spiel</p>
+                <p>Bekannt und Verständlich</p>
+
+                <img src="/Media/ssp1.png" height="500" width="500">
+            </section>
+            <section>
+                <h2>Projektdetails</h2>
+                <p>Aufgabe:<br>Erstellen eines SchereSteinPapier Spieles gegen einen Computer</p>
+                <p>Framework: JavaFX</p>
+                <p>Management: Keines</p>
+                <p>Versionverwaltung: Git/Github</p>
+                <p>Teamgröße: 2</p>
+
+            </section>
+            <section>
+                <h2>Programmablauf</h2>
+
+                <img src="/Media/ssp1.png" height="300" width="300">
+                <img src="/Media/ssp2.png" height="300" width="300">
+                <img src="/Media/ssp3.png" height="300" width="300">
+            </section>
+            <section data-auto-animate>
+                <h2 data-id="code-title">Entscheidung der Computers</h2>
+                <pre data-id="code-animation"><code class="hljs javascript" data-trim data-line-numbers>
+				private void comEntscheiden(int spielerWahl) {
+        comWahl = (int) Math.round(Math.random() * 2);
+        if (spielerWahl == comWahl) {
+            gameMessageLBL.setText("Unentschieden");
+        } else if (spielerWahl == 0) {
+            if (comWahl == 1) {
+                spielerGewonnen(false);
+            } else {
+                spielerGewonnen(true);
+            }
+				...
+    }
+
+					</code></pre>
+                <p></p>
+            </section>
+
+        </section>
+        <section>
+            <section>
+                <h2>Mineswepper</h2>
+                <p>Klassiker der Videospielewelt</p>
+                <br>
+                <img src="/Media/ms1.png">
+            </section>
+            <section>
+                <h2>Projektdetails</h2>
+                <p>Aufgabe:Erstellen eines Minesweeper-Spieles vgl der Windows-XP Version</p>
+                <p>Framework: JavaFX</p>
+                <p>Management: Keines</p>
+                <p>Versionverwaltung: Git/Github</p>
+                <p>Teamgröße: 1</p>
+
+            </section>
+            <section>
+                <h2>Programmablauf</h2>
+
+                <img src="/Media/ms1.png" height="300" width="250">
+                <img src="/Media/ms2.png" height="300" width="300">
+                <img src="/Media/ms3.png" height="300" width="300">
+            </section>
+            <section data-auto-animate>
+                <h2 data-id="code-title">Bomben Platzieren</h2>
+                <pre data-id="code-animation"><code class="hljs javascript" data-trim data-line-numbers>
+					    private void bombenPlatzieren() {
+        bombenOrte = new int[anzahlBomben][2];
+        for (int i = 0; i < anzahlBomben; i++) {
+            do {
+                bombenOrte[i][0] = (int) (Math.random() * (reihen));
+                bombenOrte[i][1] = (int) (Math.random() * (spalten));
+            } while (bombenOrteBekommen(bombenOrte[i][0], bombenOrte[i][1], i));
+        }
+    }
+    }
+
+					</code></pre>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h2>Normales Projektmanagemnet</h2>
+                <ul>
+                    <li>Rollen: Auftraggeber, Projektleiter & Mitarbeiter</li>
+                    <li>Am Anfang alles Ausmachen (Arbeitspakte , TeilProjekte, ...)</li>
+                    <li>Dokumente: Projekthandbuch, Swot, Smart Ziel</li>
+                    <li>Änderungen spät nicht mehr möglich</li>
+
+                </ul>
+
+            </section>
+            <section>
+                <img src="/Media/pm1.png" height="300" width="500">
+                <img src="/Media/pm2.png" height="500" width="450">
+            </section>
+        </section>
+        <section>
+            <section>
+                <h2>Tetris</h2>
+                <p>Weiter Klassiker der Videospielgeschichte</p>
+
+                <img src="/Media/tet.png" height=500 width="400">
+            </section>
+            <section>
+                <h2>Projektdetails</h2>
+                <p>Aufgabe:<br>Erstellen eines Tetris Spieles vgl der Nintendo-Originalversion</p>
+                <p>Framework: JavaFX</p>
+                <p>Management: Normales Projekmanagment</p>
+                <p>Versionverwaltung: Git/Github </p>
+                <p>Teamgröße: 3</p>
+
+            </section>
+            <section data-auto-animate>
+                <h2 data-id="code-title">Hauptschleife</h2>
+                <pre data-id="code-animation"><code class="hljs javascript" data-trim data-line-numbers>
+					@FXML
+  public void run() {
+                while (gameActive) {
+                    try {
+                        Thread.sleep(5);
+                    } catch (InterruptedException e) {
+                    }
+                    gameLoop();
+                }
+        ...
+    }
+
+					</code></pre>
+                <p></p>
+            </section>
+        </section>
+
+        <section>
+            <section>
+                <h2>
+                    Scrum
+                </h2>
+
+                <ul>
+                    <li>Agiles Projektmangement</li>
+
+                    <li>Rollen: Owner, Scrum Master, Mitarbeiter</li>
+                    <li>Jeder muss alles können</li>
+                    <li>Änderungen auch spät machbar</li>
+                <li>Scrum Termine: Daily, Planning, Retro, Review</li>
+                </ul>
+            </section>
+            <section>
+                <img src="/Media/tre.png" >
+            </section>
+        </section>
+        <section>
+            <section>
+                <h2>Quiz</h2>
+                <p>Erstes Scrum Projekt </p>
+                <br>
+                <img src="/Media/bs.png">
+                <p>(Leider nicht fertig geworden)</p>
+            </section>
+            <section>
+                <h2>Projektdetails</h2>
+                <p>Aufgabe:<br>Erstellen einer Anwendung vgl Quizlet/Kahoot</p>
+                <p>Framework: JavaFX</p>
+                <p>Management: Scrum</p>
+                <p>Versionverwaltung: Git/Github</p>
+                <p>Teamgröße: 4</p>
+
+            </section>
+            <section data-auto-animate>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h2>Snake</h2>
+                <p>Ein weiterer Klassiker</p>
+                <br>
+                <img src="/Media/tr.png">
+            </section>
+            <section>
+                <h2>Projektdetails</h2>
+                <p>Aufgabe:<br>Erstellen eines Taschenrechners mit den Grundrechnungsarten, Kommarechnung und weiteren
+                    einfachen Features<br>Einlesen über Buttons und Tastatur</p>
+                <p>Framework: JavaFX</p>
+                <p>Management: Keines</p>
+                <p>Versionverwaltung: Keine</p>
+                <p>Teamgröße: 1</p>
+
+            </section>
+            <section data-auto-animate>
+                <h2 data-id="code-title">Unterscheidung von <br> 7 & / und + & *, beim betätigen der shift taste</h2>
+                <pre data-id="code-animation"><code class="hljs javascript" data-trim data-line-numbers>
+					@FXML
+    public void KeyPressed(KeyEvent Event) {
+        System.out.println(Event.getText());
+        if (Event.isShiftDown()) {
+            if (Event.getText().equals("+")) calc("*");
+            else if (Event.getText().equals("7")) calc("/");
+        }
+        ...
+    }
+
+					</code></pre>
+                <p></p>
+            </section>
+        </section>
+
+        <section style="text-align: left;">
+            <h1>TO BE CONTINUED...</h1>
+            <p>
+                FOLLOW ME ON GITHUB: lschlade
+            </p>
+        </section>
+
+    </div>
+
 </div>
 
 <script src="dist/reveal.js"></script>
+<script src="plugin/zoom/zoom.js"></script>
 <script src="plugin/notes/notes.js"></script>
+<script src="plugin/search/search.js"></script>
 <script src="plugin/markdown/markdown.js"></script>
 <script src="plugin/highlight/highlight.js"></script>
 <script>
-	// More info about initialization & config:
-	// * https://revealjs.com/initialization/
-	// * https://revealjs.com/config/
-	Reveal.initialize({
-		hash: true,
 
-		// Learn about plugins: https://revealjs.com/plugins/
-		plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
-	});
+    // Also available as an ES module, see:
+    // https://revealjs.com/initialization/
+    Reveal.initialize({
+        controls: true,
+        progress: true,
+        center: true,
+        hash: true,
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight]
+    });
+
 </script>
+
 </body>
 </html>
