@@ -16,10 +16,11 @@
 
     <link rel="stylesheet" href="dist/reset.css">
     <link rel="stylesheet" href="dist/reveal.css">
-    <link rel="stylesheet" href="dist/theme/black.css" id="theme">
+    <link rel="stylesheet" href="dist/theme/league.css" id="theme">
 
     <!-- Theme used for syntax highlighting of code -->
     <link rel="stylesheet" href="plugin/highlight/monokai.css">
+
 </head>
 
 <body>
@@ -28,11 +29,13 @@
 
     <!-- Any section element inside of this container is displayed as a slide -->
     <div class="slides">
-        <section>
+        <section data-background="/media/htl.jpg"
+                 data-background-position="center">
 
-            <h2>ITP - Projekte 3 - 4 Jg.</h2>
+
+            <h2 style="background-color: black">ITP - Projekte 3 - 4 Jg.</h2>
             <p>
-                <small>Created by Lukas Schlader</small>
+                <small style="background-color: black"> Created by Lukas Schlader</small>
             </p>
         </section>
 
@@ -58,7 +61,6 @@
             <section>
                 <h2>Taschenrechner</h2>
                 <p>Erstes Projekt </p>
-                <br>
                 <img src="/Media/tr.png">
             </section>
             <section>
@@ -198,12 +200,12 @@
                 <img src="/Media/tet.png" height=500 width="400">
             </section>
             <section>
-                <h2>Projektdetails</h2>
-                <p>Aufgabe:<br>Erstellen eines Tetris Spieles vgl der Nintendo-Originalversion</p>
-                <p>Framework: JavaFX</p>
-                <p>Management: Normales Projekmanagment</p>
-                <p>Versionverwaltung: Git/Github </p>
-                <p>Teamgröße: 3</p>
+                    <h2>Projektdetails</h2>
+                    <p>Aufgabe:<br>Erstellen eines Tetris Spieles vgl der Nintendo-Originalversion</p>
+                    <p>Framework: JavaFX</p>
+                    <p>Management: Normales Projekmanagment</p>
+                    <p>Versionverwaltung: Git/Github </p>
+                    <p>Teamgröße: 3</p>
 
             </section>
             <section data-auto-animate>
@@ -239,9 +241,19 @@
                     <li>Jeder muss alles können</li>
                     <li>Änderungen auch spät machbar</li>
                 <li>Scrum Termine: Daily, Planning, Retro, Review</li>
+                    <li>Verwendung eines Trello-Boards:
+                    <ul>
+                        <li>Product-Backlog</li>
+                        <li>Sprint-Backlog</li>
+                        <li>Doing</li>
+                        <li>Ready</li>
+                        <li>Done</li>
+                    </ul></li>
+
                 </ul>
             </section>
             <section>
+                <h2>Einblick in ein Trello-Board</h2>
                 <img src="/Media/tre.png" >
             </section>
         </section>
@@ -262,36 +274,29 @@
                 <p>Teamgröße: 4</p>
 
             </section>
-            <section data-auto-animate>
-            </section>
+    
         </section>
         <section>
             <section>
                 <h2>Snake</h2>
                 <p>Ein weiterer Klassiker</p>
-                <br>
-                <img src="/Media/tr.png">
+                <img src="/Media/sn.png" height="500" width="500">
             </section>
             <section>
                 <h2>Projektdetails</h2>
-                <p>Aufgabe:<br>Erstellen eines Taschenrechners mit den Grundrechnungsarten, Kommarechnung und weiteren
-                    einfachen Features<br>Einlesen über Buttons und Tastatur</p>
+                <p>Aufgabe:<br>Snake-Spiels vgl des Snakes von Google
                 <p>Framework: JavaFX</p>
-                <p>Management: Keines</p>
-                <p>Versionverwaltung: Keine</p>
-                <p>Teamgröße: 1</p>
+                <p>Management: Scrum</p>
+                <p>Versionverwaltung: Git/Github</p>
+                <p>Teamgröße: 4</p>
 
             </section>
             <section data-auto-animate>
-                <h2 data-id="code-title">Unterscheidung von <br> 7 & / und + & *, beim betätigen der shift taste</h2>
+                <h2 data-id="code-title">Dynamischs Einfügen der Bilder</h2>
                 <pre data-id="code-animation"><code class="hljs javascript" data-trim data-line-numbers>
-					@FXML
-    public void KeyPressed(KeyEvent Event) {
-        System.out.println(Event.getText());
-        if (Event.isShiftDown()) {
-            if (Event.getText().equals("+")) calc("*");
-            else if (Event.getText().equals("7")) calc("/");
-        }
+	 if (schlongNaeherTail(posList).getPosX()-1 == snakePositionList.get(posList).getPosX()) {
+                ...
+            }
         ...
     }
 
